@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="642.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bulbash77.milkintake.FrmMainController">
+   <children>
+      <SplitPane dividerPositions="0.7003257328990228" layoutX="-2.0" layoutY="50.0" orientation="VERTICAL" prefHeight="312.0" prefWidth="641.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView layoutY="-6.0" prefHeight="212.0" prefWidth="639.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn prefWidth="252.0" text="C1" />
+                      <TableColumn prefWidth="180.0" text="C2" />
+                        <TableColumn prefWidth="149.0" text="Column X" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="103.0" prefWidth="639.0">
+               <children>
+                  <ImageView fx:id="imgView" fitHeight="95.0" fitWidth="138.0" layoutX="38.0" layoutY="-3.0" onMouseClicked="#onMouseClickedImgView" onMouseEntered="#onMouseEnteredImgView" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../patterns_free.jpg" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
