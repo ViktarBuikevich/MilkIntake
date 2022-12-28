@@ -34,16 +34,16 @@ public class AuthorizationController {
     void onBtnLoginSingUp(ActionEvent event) throws IOException {
         System.out.println("onBtnLoginSingUp(ActionEvent event)");
         Stage stage = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader(MilkIntakeApplication.class.getResource("frmSingUp.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MilkIntakeApplication.class.getResource("frmSingUp.fxml")); // загружаем новый fxml-файл
         //FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("frmSingUp.fxml"));
         stage.setTitle("Регистрация пользователя!");
         stage.setMinHeight(260);
         stage.setMinWidth(260);
-        stage.setResizable(false);
+        stage.setResizable(false); //указщываем что изменять размер нельзя
         Scene scene = new Scene(fxmlLoader.load()); //, 260, 260);
         stage.setScene(scene);
-        stage.initModality(Modality.WINDOW_MODAL);
-        stage.initOwner(((Node)event.getSource()).getScene().getWindow());
+        stage.initModality(Modality.WINDOW_MODAL); //признак модальности нового окна
+        stage.initOwner(((Node)event.getSource()).getScene().getWindow()); // указываем родительское окно для диалога
         stage.show();
 
     }

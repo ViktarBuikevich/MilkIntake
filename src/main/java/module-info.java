@@ -5,6 +5,7 @@ module bulbash77.milkintake {
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
     requires org.kordamp.ikonli.javafx;
+    requires java.sql;
 
     opens bulbash77.milkintake to javafx.fxml;
     exports bulbash77.milkintake;
