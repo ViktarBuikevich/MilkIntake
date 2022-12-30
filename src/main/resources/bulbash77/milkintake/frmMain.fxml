@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
@@ -8,29 +11,40 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="587.0" prefWidth="854.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bulbash77.milkintake.FrmMainController">
+<AnchorPane prefHeight="600.0" prefWidth="860.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bulbash77.milkintake.FrmMainController">
    <children>
-      <SplitPane dividerPositions="0.5878787878787879" layoutX="-2.0" layoutY="50.0" orientation="VERTICAL" prefHeight="312.0" prefWidth="641.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+      <SplitPane dividerPositions="0.5766423357664233" layoutX="-2.0" layoutY="50.0" orientation="VERTICAL" prefHeight="312.0" prefWidth="641.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
-                  <TableView fx:id="tvTRips" layoutY="-6.0" prefHeight="212.0" prefWidth="639.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <TableView fx:id="tvRoutes" layoutY="-6.0" prefHeight="212.0" prefWidth="639.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
-                      <TableColumn fx:id="Auto" prefWidth="122.0" text="Дата время поступления" />
-                      <TableColumn prefWidth="310.0" text="Автотранспорт" />
-                        <TableColumn prefWidth="215.0" text="ФИО водителя" />
+                      <TableColumn fx:id="Auto" prefWidth="173.0" text="Дата время поступления" />
+                      <TableColumn prefWidth="260.0" text="Автотранспорт" />
+                        <TableColumn prefWidth="214.0" text="ФИО водителя" />
                     </columns>
                   </TableView>
+                  <Button fx:id="btnRouteAdd" layoutX="14.0" layoutY="285.0" mnemonicParsing="false" onAction="#onRouteAdd" prefHeight="25.0" prefWidth="80.0" text="Добавить" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="14.0" />
+                  <Button fx:id="btnRouteEdit" layoutX="101.0" layoutY="285.0" mnemonicParsing="false" onAction="#onRouteEdit" prefHeight="25.0" prefWidth="100.0" text="Редактировать" AnchorPane.bottomAnchor="15.0" />
+                  <Button fx:id="btnRouteDelete" layoutX="208.0" layoutY="285.0" mnemonicParsing="false" onAction="#onRouteDelete" prefHeight="25.0" prefWidth="80.0" text="Удалить" AnchorPane.bottomAnchor="15.0" />
+                  <Label fx:id="lblRouteCount" layoutX="748.0" layoutY="285.0" prefHeight="17.0" prefWidth="161.0" text="Количество рейсов:" AnchorPane.bottomAnchor="23.0" AnchorPane.rightAnchor="10.0" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="103.0" prefWidth="639.0">
                <children>
-                  <TableView prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <TableView fx:id="tvTtn" minWidth="100.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
-                      <TableColumn prefWidth="75.0" text="C1" />
-                      <TableColumn prefWidth="75.0" text="C2" />
+                      <TableColumn prefWidth="136.0" text="Дата ТТН" />
+                      <TableColumn prefWidth="90.0" text="Номер ТТН" />
+                        <TableColumn prefWidth="354.0" text="Контрагент" />
+                        <TableColumn prefWidth="128.0" text="Вес  по ТТН" />
+                        <TableColumn prefWidth="108.0" text="Вес  принятый" />
                     </columns>
                   </TableView>
+                  <Button fx:id="btnTtnAdd" layoutX="14.0" layoutY="197.0" mnemonicParsing="false" onAction="#onTtnAdd" prefHeight="25.0" prefWidth="80.0" text="Добавить" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="14.0" />
+                  <Button fx:id="btnTtnEdit" layoutX="101.0" layoutY="197.0" mnemonicParsing="false" onAction="#onTtnEdit" prefHeight="25.0" prefWidth="100.0" text="Редактировать" AnchorPane.bottomAnchor="15.0" />
+                  <Button fx:id="btnTtnDelete" layoutX="208.0" layoutY="197.0" mnemonicParsing="false" onAction="#onTtnDelete" prefHeight="25.0" prefWidth="80.0" text="Удалить" AnchorPane.bottomAnchor="15.0" />
+                  <Label fx:id="lblTtnCount" layoutX="683.0" layoutY="201.0" prefHeight="17.0" prefWidth="161.0" text="Количество ТТН:" AnchorPane.bottomAnchor="23.0" AnchorPane.rightAnchor="10.0" />
                </children></AnchorPane>
         </items>
       </SplitPane>
@@ -38,24 +52,38 @@
         <menus>
           <Menu mnemonicParsing="false" text="Справочники">
             <items>
-              <MenuItem mnemonicParsing="false" text="Пользователи" />
-                  <MenuItem mnemonicParsing="false" text="Автотранспорт" />
-                  <MenuItem mnemonicParsing="false" text="Контрагенты" />
+              <MenuItem fx:id="mmDictUsers" mnemonicParsing="false" onAction="#onDictUsers" text="Пользователи" />
+                  <MenuItem fx:id="mmDictCars" mnemonicParsing="false" onAction="#onDictCars" text="Автотранспорт" />
+                  <MenuItem fx:id="mmDictSuppliers" mnemonicParsing="false" onAction="#onDictSuppliers" text="Контрагенты" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Рейсы">
             <items>
-              <MenuItem mnemonicParsing="false" text="Добавить" />
-                  <MenuItem mnemonicParsing="false" text="Удалить" />
-                  <MenuItem mnemonicParsing="false" text="Добавить" />
+              <MenuItem fx:id="mmRouteAdd" mnemonicParsing="false" text="Добавить" />
+                  <MenuItem fx:id="mmRouteEdit" mnemonicParsing="false" text="Редактировать" />
+                  <MenuItem fx:id="mmRouteDelete" mnemonicParsing="false" text="Удалить" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Help">
+            <Menu mnemonicParsing="false" text="Накладные">
+               <items>
+                  <MenuItem fx:id="mmTtnAdd" mnemonicParsing="false" text="Добавить" />
+                  <MenuItem fx:id="mmTtnEdit" mnemonicParsing="false" text="Редактировать" />
+                  <MenuItem fx:id="mmTtnDelete" mnemonicParsing="false" text="Удалить" />
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Отчеты">
             <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+              <MenuItem fx:id="mmReportMilkIntake" mnemonicParsing="false" onAction="#onReportMilkIntake" text="Поступление молока" />
             </items>
           </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onMenuAbout" text="About" />
+               </items>
+            </Menu>
         </menus>
       </MenuBar>
+      <DatePicker fx:id="dpCurrentDate" layoutX="622.0" layoutY="15.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="15.0" />
+      <Button fx:id="btnChangeData" layoutX="786.0" layoutY="15.0" mnemonicParsing="false" onAction="#onChangeData" text="Применить" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="15.0" />
    </children>
 </AnchorPane>

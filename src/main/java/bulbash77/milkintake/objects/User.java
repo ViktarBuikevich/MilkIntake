@@ -2,8 +2,8 @@ package bulbash77.milkintake.objects;
 
 public class User {
     private int id;
-    private String name;
-    private String passw;
+    private String login;
+    private String password;
     private UserRole role;
 
     public int getId() {
@@ -14,24 +14,24 @@ public class User {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getLogin() {
+        return login;
     }
 
-    public String getPassw(String password) {
-        return passw;
+    public String getPassword() {
+        return password;
     }
     //роль в базе int 0-admin, 1-OPERATOR, 2-LABORANT
     public UserRole getRole() {
         return role;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setLogin(String login) {
+        this.login = login;
     }
 
-    public void setPassw(String passw) {
-        this.passw = passw;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     private UserRole returnUserRoleById(int id){
@@ -70,10 +70,32 @@ public class User {
 
     public User() {}
 
-    public User(int id, String name, String passw, UserRole role) {
+    public User(int id, String login, String password, UserRole role) {
         this.id = id;
-        this.name = name;
-        this.passw = passw;
+        this.login = login;
+        this.password = password;
         this.role = role;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof User)) return false;
+
+        User user = (User) o;
+
+        if (getId() != user.getId()) return false;
+        if (!getLogin().equals(user.getLogin())) return false;
+        if (!getPassword().equals(user.getPassword())) return false;
+        return getRole() == user.getRole();
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getId();
+        result = 31 * result + getLogin().hashCode();
+        result = 31 * result + getPassword().hashCode();
+        result = 31 * result + getRole().hashCode();
+        return result;
     }
 }
